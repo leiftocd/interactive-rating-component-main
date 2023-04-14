@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Very-Dark-Blue-rgba: rgba(69, 76, 85, 0.541);
+
+    --Orange: hsl(25, 97%, 53%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Overpass', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-Dark-Blue);
+    position: relative;
+}
+
+main{
+    width: 37.5rem;
+    min-width: 30%;
+    background-color: var(--Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3.5rem 3rem;
+    
+
+}
+.rating{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+i{
+    background-color: var(--Very-Dark-Blue-rgba);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+}
+
+h1{
+    color: var(--White);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+p{
+    color: var(--Medium-Grey);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.rating-value{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+}
+.rating-value button{
+    border: none;
+}
+
+.value{
+    background-color: var(--Very-Dark-Blue-rgba);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--Medium-Grey);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.value:hover{
+    color: var(--White);
+    background-color: var(--Orange);
+}
+
+.value:focus{
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+.btn{
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: var(--Orange);
+    color: var(--White);
+    border: none;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+.thank{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem;
+    display: none;
+}
+
+
+
+.thank-content{
+    width: 100%;
+    text-align: center;
+    letter-spacing: .5px;
+}
+
+.return{
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: var(--Very-Dark-Blue-rgba);
+    color: var(--Orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem 2.2rem;
+    border-radius: 3rem;
+    list-style: 1.4rem;
+}
+#return-value{
+    margin: 0 0.5rem;
+}
+
+
+@media (max-width:1440px) {
+    body{
+        max-width: 144rem;
+    }
+    
+    main{
+        max-width: 90%;
+    }
+    .rating,
+    .thank{
+        min-width: 100% ;
+    }
+    
+    .rating-value{
+        width: 100%;
+        gap: 2rem;
+    }
+}
+
+@media (max-width:375px){
+    body{
+        max-width: 37.5rem;
+        font-size: 50%;
+    }
+    
+    main{
+        max-width: 90%;
+        margin: 0;
+        padding: 3.5rem 2rem;
+    }
+    .rating,
+    .thank{
+        width: 100% ;
+        gap: 1.5rem;
+    }
+
+    .rating-value{
+        gap: 1.5rem;
+    }
+}
